@@ -103,7 +103,7 @@ class BookComponent extends StatelessWidget {
                         }
                       },
                       fit: BoxFit.fill,
-                      width: 114,
+                      width: 150,
                       height: 162,
                     ),
                   ),

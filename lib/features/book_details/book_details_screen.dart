@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:worldofbooks/core/models/books_response_model.dart';
 import 'package:worldofbooks/core/theme/primary_style.dart';
+import 'package:worldofbooks/core/utils/custom_grid/custom_grid_fixed_height.dart';
 import 'package:worldofbooks/features/book_details/components/book_component.dart';
 import 'package:worldofbooks/features/book_details/cubit/book_cubit.dart';
 import 'package:worldofbooks/features/book_details/cubit/book_state.dart';
@@ -349,20 +350,11 @@ class _BookDetailsScreenState extends State<BookDetailsScreen>
                                     vertical: 16.0,
                                   ),
                             gridDelegate:
-                                SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: constraints.maxWidth > 1200
-                                  ? 6
-                                  : constraints.maxWidth < 1200 &&
-                                          constraints.maxWidth > 900
-                                      ? 5
-                                      : constraints.maxWidth < 900 &&
-                                              constraints.maxWidth > 800
-                                          ? 4
-                                          : 3,
-                              childAspectRatio:
-                                  (114 / (162 + (maxHeight > 700 ? 65 : 105))),
-                              mainAxisSpacing: 0.0,
-                              crossAxisSpacing: 16.0,
+                                const SliverGridDelegateWithFixedCrossAxisCountAndFixedHeight(
+                              crossAxisCount: 3,
+                              crossAxisSpacing: 16,
+                              mainAxisSpacing: 5,
+                              height: 240,
                             ),
                             itemBuilder: (context, index) {
                               var book = (state.status ==
