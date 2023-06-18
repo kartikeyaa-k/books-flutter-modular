@@ -1,0 +1,86 @@
+name: worldofbooks
+description: A new Flutter project.
+
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.5 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+
+  # Design
+  cupertino_icons: ^1.0.2
+  flutter_svg: 2.0.7
+  
+
+  # Network
+  dio: 5.2.1+1
+  
+  # Service locator
+  get_it: 7.2.0
+
+  # State management
+  flutter_bloc: ^8.1.2
+  bloc: ^8.1.1
+  
+
+  # Utils
+  equatable: 2.0.5
+  dartz: 0.10.1
+  logger: 1.3.0
+  url_launcher: 6.1.11
+  extended_image: ^8.0.2
+  pull_to_refresh: 2.0.0
+  path_provider: 2.0.14
+  transparent_image: 2.0.1
+  debounce_throttle: 2.0.0
+  image_network: 2.5.2
+
+
+  
+
+  # Modules
+  #
+  network_layer:
+    path: modules/network_layer
+  # Interceptor Module
+  interceptor_layer:
+    path: modules/interceptor_layer
+  # Endpoint Module
+  endpoint_layer:
+    path: modules/endpoint_layer
+  storage_layer:
+    path: modules/storage_layer
+  
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/
+    - assets/icons/
+    - assets/images/
+
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Montserrat-Medium.ttf
+          weight: 600
+        - asset: assets/fonts/Montserrat-SemiBold.ttf
+          weight: 800
+          
+    
+
