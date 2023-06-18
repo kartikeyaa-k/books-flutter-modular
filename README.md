@@ -3,6 +3,7 @@
 A simple books mobile application in Flutter
 
 ## Description
+0. Api call for each search keyword handled with Debouncer/Throttle method.
 1. Implemented modular structure for each layer such as network layer, endpoint layer, interceptor layer. 
 2. Layout tested on various mobile platforms and screen sizes.
 3. Project structure : 
